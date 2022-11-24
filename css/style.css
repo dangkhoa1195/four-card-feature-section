@@ -1,4 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+html {
+  font-size: 62.5%;
+}
+
 body {
+  background-color: hsl(0deg, 0%, 98%);
+  display: grid;
   font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.container {
+  min-width: 37.5rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.txt-highlight {
+  font-weight: 600;
+}
+
+.feature__title {
+  color: hsl(234deg, 12%, 34%);
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.feature__desc {
+  color: hsl(229deg, 6%, 66%);
+  text-align: center;
+}
+.feature__services {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 7.5rem;
+}
+.feature__service {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px 0 hsl(229deg, 6%, 66%);
+  width: 31rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.feature__service::after {
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.feature__service--cyan::after {
+  background-color: hsl(180deg, 62%, 55%);
+}
+.feature__service--red::after {
+  background-color: hsl(0deg, 78%, 62%);
+}
+.feature__service--orange::after {
+  background-color: hsl(34deg, 97%, 64%);
+}
+.feature__service--blue::after {
+  background-color: hsl(212deg, 86%, 64%);
+}
+.feature__service-title {
+  color: hsl(234deg, 12%, 34%);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.feature__service-desc {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin-bottom: 4rem;
+}
+.feature__service-img {
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */

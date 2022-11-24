@@ -1,4 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import './variables';
+html {
+  font-size: 62.5%;
+}
 body {
+  background-color: $clr-background;
+  display: grid;
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  place-items: center;
+}
+.container {
+  min-width: 37.5rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.txt-highlight {
+  font-weight: $fw-bold;
+}
+.feature {
+  &__title {
+    color: $clr-primary;
+    font-size: 2.5rem;
+    font-weight: $fw-light;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  &__desc {
+    color: $clr-secondary;
+    text-align: center;
+  }
+  &__services {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 7.5rem;
+  }
+  &__service {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px 0 $clr-secondary;
+    width: 31rem;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      height: 4px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    &--cyan::after {
+      background-color: $clr-cyan;
+    }
+    &--red::after {
+      background-color: $clr-red;
+    }
+    &--orange::after {
+      background-color: $clr-orange;
+    }
+    &--blue::after {
+      background-color: $clr-blue;
+    }
+    &-title {
+      color: $clr-primary;
+      font-weight: $fw-bold;
+      margin-bottom: 1rem;
+    }
+    &-desc {
+      color: $clr-secondary;
+      font-size: 1.3rem;
+      font-weight: $fw-light;
+      margin-bottom: 4rem;
+    }
+    &-img {
+      margin-left: auto;
+    }
+  }
 }
