@@ -13,9 +13,10 @@ body {
 }
 
 .container {
-  min-width: 37.5rem;
+  min-width: 31rem;
+  max-width: 111rem;
   margin: 0 auto;
-  padding: 3rem;
+  margin: 3rem;
 }
 
 .txt-highlight {
@@ -29,9 +30,20 @@ body {
   margin-bottom: 2.5rem;
   text-align: center;
 }
+@media screen and (min-width: 425px) {
+  .feature__title {
+    font-size: 3.8rem;
+  }
+}
 .feature__desc {
   color: hsl(229deg, 6%, 66%);
   text-align: center;
+}
+@media screen and (min-width: 425px) {
+  .feature__desc {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }
 .feature__services {
   align-items: center;
@@ -41,14 +53,37 @@ body {
   gap: 2.5rem;
   margin-top: 7.5rem;
 }
+@media screen and (min-width: 425px) {
+  .feature__services {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .feature__service {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 3px 10px 0 hsl(229deg, 6%, 66%);
-  width: 31rem;
+  max-width: 31rem;
+  min-width: 31rem;
   padding: 3rem;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 425px) {
+  .feature__service {
+    max-width: 35rem;
+  }
+  .feature__service--third {
+    order: 3;
+  }
+  .feature__service--fourth {
+    order: 4;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .feature__service--center {
+    transform: translateY(50%);
+  }
 }
 .feature__service::after {
   content: "";
@@ -75,11 +110,21 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 425px) {
+  .feature__service-title {
+    font-size: 2rem;
+  }
+}
 .feature__service-desc {
   color: hsl(229deg, 6%, 66%);
   font-size: 1.3rem;
   font-weight: 200;
   margin-bottom: 4rem;
+}
+@media screen and (min-width: 425px) {
+  .feature__service-desc {
+    font-size: 1.5rem;
+  }
 }
 .feature__service-img {
   margin-left: auto;
